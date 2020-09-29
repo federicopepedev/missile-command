@@ -22,5 +22,5 @@ The game is played by moving a crosshair across the sky background via a trackba
 ## Reference 
 [Wikipedia - Missile Command](https://en.wikipedia.org/wiki/Missile_Command)
 
-# Contact
+## Contact
 Please send an e-mail to Federico Pepe via federicopepedev@gmail.com
