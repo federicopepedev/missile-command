@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     Text firstBonus;
     Text secondBonus;
 
+    private Animator arrowsAnim;
+
     private EnemiesManager enemiesManager;
     private ShotsManager shotsManager;
 
@@ -46,6 +48,8 @@ public class GameManager : MonoBehaviour
         endText = GameObject.Find("EndText");
         endText.SetActive(false);
 
+        arrowsAnim = GameObject.Find("Cities").GetComponent<Animator>();
+
         enemiesManager = GameObject.Find("EnemiesManager").GetComponent<EnemiesManager>();
         shotsManager = GameObject.Find("ShotsManager").GetComponent<ShotsManager>();
     }
@@ -57,6 +61,8 @@ public class GameManager : MonoBehaviour
         levelComplete = false;
 
         points.text = levelNumber.ToString();
+
+        arrowsAnim.Play("Arrows", -1, 0);
 
         highScore = PlayerPrefs.GetInt("highscore");
     }
